@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @RawCuriosity
-- 👀 I’m interested in codeing and minecraft
-- 🌱 I’m currently learning java C and C++
-- 💞️ I’m looking to collaborate on Holiday's Project
+- 👀 I’m interested in coding, pentesting and video games
+- 🌱 I’m currently learning C
+- 💞️ I’m looking to collaborate on none at the moment
 - 📫 How to reach me idrk
 
 <!---
