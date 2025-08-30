@@ -6,163 +6,18 @@
   <title>kadendaya.ca</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/index.css" />
+  <link rel="stylesheet" href="styles/navbar.css" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="site-title">
-        <span class="title-text">kadendaya</span>
-        <span class="title-dot">.</span>
-        <span class="title-text">ca</span>
-      </div>
-      
-      <ul class="nav-links">
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="/aboutme.html">About Me</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Projects<span class="dropdown-arrow">▼</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Web Development</a></li>
-            <li class="sub-dropdown">
-              <a href="#" class="sub-dropdown-toggle">Mobile Apps <span class="sub-arrow">▶</span></a>
-              <ul class="sub-dropdown-menu">
-                <li><a href="#">iOS Apps</a></li>
-                <li><a href="#">Android Apps</a></li>
-                <li><a href="#">Cross-platform</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Data Science</a></li>
-            <li class="sub-dropdown">
-              <a href="#" class="sub-dropdown-toggle">AI/ML <span class="sub-arrow">▶</span></a>
-              <ul class="sub-dropdown-menu">
-                <li><a href="#">Machine Learning</a></li>
-                <li><a href="#">Neural Networks</a></li>
-                <li><a href="#">Computer Vision</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Events<span class="dropdown-arrow">▼</span></a>
-          <ul class="dropdown-menu">
-            <li class="sub-dropdown">
-              <a href="#" class="sub-dropdown-toggle">Science Fairs <span class="sub-arrow">▶</span></a>
-              <ul class="sub-dropdown-menu">
-                <li><a href="#">BASEF 2024</a></li>
-              </ul>
-            </li>
-            <li class="sub-dropdown">
-              <a href="#" class="sub-dropdown-toggle">Hackathons <span class="sub-arrow">▶</span></a>
-              <ul class="sub-dropdown-menu">
-                <li><a href="#">Hack The North 2025</a></li>
-              </ul>
-            </li>
-            <li class="sub-dropdown">
-              <a href="#" class="sub-dropdown-toggle">Judo <span class="sub-arrow">▶</span></a>
-              <ul class="sub-dropdown-menu">
-                <li><a href="#">Asahi Open 2023</a></li>
-                <li><a href="#">Ontario Open 2023</a></li>
-                <li><a href="#">EIJC 2024</a></li>
-                <li><a href="#">Tora Invitational 2024</a></li>
-                <li><a href="#">Asahi Open 2024</a></li>
-                <li><a href="#">Ontario Open 2024</a></li>
-                <li><a href="#">EIJC 2025</a></li>
-                <li><a href="#">Tora Invitational 2025</a></li>
-                <li><a href="#">Nationals 2025</a></li>
-              </ul>
-            </li>
-            <li class="sub-dropdown">
-              <a href="#" class="sub-dropdown-toggle">Other<span class="sub-arrow">▶</span></a>
-              <ul class="sub-dropdown-menu">
-                <li><a href="#">Toronto Makerfest 2018</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle">Contact<span class="dropdown-arrow">▼</span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Phone</a></li>
-            <li><a href="#">Social Media</a></li>
-          </ul>
-        </li>
-      </ul>
-      
-      <div class="search-icon">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </div>
-    </div>
-  </nav>
+  <div class="navbar" id="navbar-container">
+  </div>
 
   <div class="hero-text">
     <h1>Hello,<br>I'm Kaden</h1>
     <p>I like to build things</p>
   </div>
 
-  <script>
-    // Dropdown functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const dropdowns = document.querySelectorAll('.dropdown');
-      const subDropdowns = document.querySelectorAll('.sub-dropdown');
-      
-      // Main dropdowns
-      dropdowns.forEach(dropdown => {
-        const toggle = dropdown.querySelector('.dropdown-toggle');
-        const menu = dropdown.querySelector('.dropdown-menu');
-        
-        toggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          // Close all other main dropdowns
-          dropdowns.forEach(other => {
-            if (other !== dropdown) {
-              other.classList.remove('active');
-            }
-          });
-          
-          // Toggle current dropdown
-          dropdown.classList.toggle('active');
-        });
-      });
-      
-      // Sub-dropdowns
-      subDropdowns.forEach(subDropdown => {
-        const toggle = subDropdown.querySelector('.sub-dropdown-toggle');
-        
-        toggle.addEventListener('click', function(e) {
-          e.preventDefault();
-          e.stopPropagation();
-          
-          // Close all other sub-dropdowns
-          subDropdowns.forEach(other => {
-            if (other !== subDropdown) {
-              other.classList.remove('active');
-            }
-          });
-          
-          // Toggle current sub-dropdown
-          subDropdown.classList.toggle('active');
-        });
-      });
-      
-      // Close dropdowns when clicking outside
-      document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-          dropdowns.forEach(dropdown => {
-            dropdown.classList.remove('active');
-          });
-        }
-        if (!e.target.closest('.sub-dropdown')) {
-          subDropdowns.forEach(subDropdown => {
-            subDropdown.classList.remove('active');
-          });
-        }
-      });
-    });
-  </script>
+  <script src="scripts/navbar.js"></script>
 </body>
 </html>
