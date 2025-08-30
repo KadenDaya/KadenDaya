@@ -19,7 +19,7 @@
   <text x="0" y="30" fill="#c9d1d9">
     <tspan x="0" y="30">kaden@daya</tspan> -———————————————————————————————————————————————————————————————————————————————————————-—-
     <tspan x="0" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................................................................................ </tspan><tspan class="value">Lizard</tspan>
-    <tspan x="0" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> .............................................................. </tspan><tspan class="value" id="age_data">13 years, 09 months, 27 days</tspan>
+    <tspan x="0" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> .............................................................. </tspan><tspan class="value" id="age_data">13 years, 09 months, 28 days</tspan>
     <tspan x="0" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ................................................................ </tspan><tspan class="value">Halton District School Board</tspan>
     <tspan x="0" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ................................................................................... </tspan><tspan class="value">Student</tspan>
     <tspan x="0" y="130" class="cc">. </tspan><tspan class="key">IPv4</tspan>:<tspan class="cc"> ............................................................................. </tspan><tspan class="value">Toronto, Canada</tspan>
