@@ -10,53 +10,14 @@ fetch('navbar.html')
 
 function initializeDropdowns() {
   const dropdowns = document.querySelectorAll('.dropdown');
-  const subDropdowns = document.querySelectorAll('.sub-dropdown');
   
   dropdowns.forEach(dropdown => {
     const toggle = dropdown.querySelector('.dropdown-toggle');
-    const menu = dropdown.querySelector('.dropdown-menu');
     
     toggle.addEventListener('click', function(e) {
       e.preventDefault();
-      
-      dropdowns.forEach(other => {
-        if (other !== dropdown) {
-          other.classList.remove('active');
-        }
-      });
-      
-      dropdown.classList.toggle('active');
+      window.location.href = this.href;
     });
-  });
-  
-  subDropdowns.forEach(subDropdown => {
-    const toggle = subDropdown.querySelector('.sub-dropdown-toggle');
-    
-    toggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      e.stopPropagation();
-      
-      subDropdowns.forEach(other => {
-        if (other !== subDropdown) {
-          other.classList.remove('active');
-        }
-      });
-      
-      subDropdown.classList.toggle('active');
-    });
-  });
-  
-  document.addEventListener('click', function(e) {
-    if (!e.target.closest('.dropdown')) {
-      dropdowns.forEach(dropdown => {
-        dropdown.classList.remove('active');
-      });
-    }
-    if (!e.target.closest('.sub-dropdown')) {
-      subDropdowns.forEach(subDropdown => {
-        subDropdown.classList.remove('active');
-      });
-    }
   });
 }
 
@@ -74,5 +35,17 @@ function setActiveNavigation() {
   } else if (currentPath === '/aboutme.html' || currentPath.endsWith('aboutme.html')) {
     const aboutLink = document.querySelector('.nav-links a[href="/aboutme.html"]');
     if (aboutLink) aboutLink.classList.add('active');
+  } else if (currentPath === '/contact.html' || currentPath.endsWith('contact.html')) {
+    const contactLink = document.querySelector('.nav-links a[href="/contact.html"]');
+    if (contactLink) contactLink.classList.add('active');
+  } else if (currentPath === '/donate.html' || currentPath.endsWith('donate.html')) {
+    const donateLink = document.querySelector('.nav-links a[href="/donate.html"]');
+    if (donateLink) donateLink.classList.add('active');
+  } else if (currentPath === '/blog.html' || currentPath.endsWith('blog.html') || currentPath.startsWith('/blog/')) {
+    const blogLink = document.querySelector('.nav-links a[href="/blog.html"]');
+    if (blogLink) blogLink.classList.add('active');
+  } else if (currentPath === '/projects.html' || currentPath.endsWith('projects.html') || currentPath.startsWith('/projects/')) {
+    const projectsLink = document.querySelector('.nav-links a[href="/projects.html"]');
+    if (projectsLink) projectsLink.classList.add('active');
   }
 }
