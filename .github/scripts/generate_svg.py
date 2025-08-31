@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime, UTC
+from dateutil.relativedelta import relativedelta
 import os
 import time
 
@@ -18,32 +19,33 @@ GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
 if not GITHUB_TOKEN:
     raise ValueError("GITHUB_TOKEN environment variable not set.")
 
-
 print(f"Template files to look for:")
 print(f"  Light: {LIGHT_TEMPLATE} (exists: {os.path.exists(LIGHT_TEMPLATE)})")
 print(f"  Dark: {DARK_TEMPLATE} (exists: {os.path.exists(DARK_TEMPLATE)})")
 print(f"GitHub token available: {'Yes' if GITHUB_TOKEN else 'No'}")
 
+
 def Calc_Age():
     print("Calculating age...")
     now = datetime.now(UTC)
-    delta = now - BIRTHDATE
-    years = delta.days // 365
-    months = (delta.days % 365) // 30
-    days = delta.days % 30
+    delta = relativedelta(now, BIRTHDATE)
+    years = delta.years
+    months = delta.months
+    days = delta.days
     age_result = [f"{years:02d}", f"{months:02d}", f"{days:02d}"]
     print(f"Age calculated: {years} years, {months} months, {days} days")
     return age_result
 
+
 def fetch_stats():
     print("Fetching GitHub stats...")
     headers = {"Authorization": f"Bearer {GITHUB_TOKEN}"}
-    
+
     print("Getting user data...")
     user_data = requests.get(f"https://api.github.com/users/{USERNAME}", headers=headers).json()
     followers = user_data.get("followers", 0)
     print(f"Followers: {followers}")
-    
+
     print("Fetching repositories...")
     repos = []
     page = 1
@@ -123,6 +125,7 @@ def fetch_stats():
     stats_result = [f'{own_repo_count:02}', f'{contributed_repo_count}', f'{stars:03}', f'{total_commits:03}', f'{followers:03}', f'{lines:05}', f'{total_additions:05}', f'{total_deletions:05}']
     return stats_result
 
+
 def generate_svg():
     print("Starting SVG generation...")
     age = Calc_Age()
@@ -163,6 +166,7 @@ def generate_svg():
 
     with open(DARK_OUTPUT, "w") as file:
         file.write(svg_dark)
+
 
 if __name__ == "__main__":
     generate_svg()
