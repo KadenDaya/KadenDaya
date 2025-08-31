@@ -2,7 +2,7 @@ name: Update SVG Stats
 
 on:
   schedule:
-    - cron: '0 * * * *'  # every hour
+    - cron: '0 */6 * * *'  # every 6 hours
   workflow_dispatch:
 
 jobs:
@@ -19,13 +19,12 @@ jobs:
         python-version: '3.x'
 
     - name: Install Python dependencies
-      run: pip install requests
+      run: pip install requests python-dateutil
 
     - name: Run Python script
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: python .github/scripts/generate_svg.py
-
 
     - name: Commit and push if changed
       run: |
