@@ -26,11 +26,11 @@
     <tspan x="0" y="150" class="cc">. </tspan>
     <tspan x="0" y="170" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Programming</tspan>:<tspan class="cc"> ...................................... </tspan><tspan class="value">Python, Javascript, Typescript, C/C++</tspan>
     <tspan x="0" y="190" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Frameworks</tspan>:<tspan class="cc"> ................................. </tspan><tspan class="value">Next.js, FastAPI, Flask, Django, PostgreSQL</tspan>
-    <tspan x="0" y="210" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> ................................................................... </tspan><tspan class="value">English, French</tspan>
-    <tspan x="0" y="230" class="cc">. </tspan>
-    <tspan x="0" y="250" class="cc">. </tspan><tspan class="key">Achievements</tspan>.<tspan class="key">Hackathons</tspan>:<tspan class="cc"> ............................................... </tspan><tspan class="value">Hack the North 2025 Winner</tspan>
-    <tspan x="0" y="270" class="cc">. </tspan><tspan class="key">Achievements</tspan>.<tspan class="key">Courses</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">HarvardX - CS50x, HarvardX - CS50ai, TCM Security - PEH</tspan>
-    <tspan x="0" y="290" class="cc">. </tspan><tspan class="key">Achievements</tspan>.<tspan class="key">Projects</tspan>:<tspan class="cc"> ....................................................</tspan><tspan class="value">Money Talks (HTN Winner)</tspan>
+    <tspan x="0" y="210" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Tools</tspan>:<tspan class="cc"> ............................................. </tspan><tspan class="value">Git, Cursor, AWS, Vercel, Kubernetes</tspan>
+    <tspan x="0" y="230" class="cc">. </tspan><tspan class="key">Languages</tspan>.<tspan class="key">Real</tspan>:<tspan class="cc"> ................................................................... </tspan><tspan class="value">English, French</tspan>
+    <tspan x="0" y="250" class="cc">. </tspan>
+    <tspan x="0" y="270" class="cc">. </tspan><tspan class="key">Achievements</tspan>.<tspan class="key">Hackathons</tspan>:<tspan class="cc"> ............................................... </tspan><tspan class="value">Hack the North 2025 Winner</tspan>
+    <tspan x="0" y="290" class="cc">. </tspan><tspan class="key">Achievements</tspan>.<tspan class="key">Courses</tspan>:<tspan class="cc"> ..................... </tspan><tspan class="value">HarvardX - CS50x, HarvardX - CS50ai, TCM Security - PEH</tspan>
     <tspan x="0" y="330">- Contact</tspan> -————————————————————————————————————————————————————————————————————————————————————————-—-
     <tspan x="0" y="350" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Personal</tspan>:<tspan class="cc"> ............................................................. </tspan><tspan class="value">kaden.daya@icloud.com</tspan>
     <tspan x="0" y="370" class="cc">. </tspan><tspan class="key">Email</tspan>.<tspan class="key">Educationial</tspan>:<tspan class="cc"> .............................................................. </tspan><tspan class="value">1dayakad@hdsb.ca</tspan>
@@ -40,6 +40,6 @@
     <tspan x="0" y="470" class="cc">. </tspan><tspan class="key">Repos</tspan>:<tspan class="cc" id="repo_data_dots"> ......................... </tspan><tspan class="value" id="repo_data">{{REPOS}}</tspan> {<tspan class="key">Contributed</tspan>: <tspan class="value" id="contrib_data">{{CONTRIBUTED}}</tspan>} | <tspan class="key">Stars</tspan>:<tspan class="cc" id="star_data_dots"> ................................. </tspan><tspan class="value" id="star_data">{{STARS}}</tspan>
     <tspan x="0" y="490" class="cc">. </tspan><tspan class="key">Commmits</tspan>:<tspan class="cc" id="commit_data_dots"> ...................................... </tspan><tspan class="value" id="commit_data">{{COMMITS}}</tspan> | <tspan class="key">Followers</tspan>:<tspan class="cc" id="follower_data_dots"> ............................. </tspan><tspan class="value" id="follower_data">{{FOLLOWERS}}</tspan>
     <tspan x="0" y="510" class="cc">. </tspan><tspan class="key">Lines of Code on GitHub</tspan>:<tspan class="cc" id="loc_data_dots">............................................... </tspan><tspan class="value" id="loc_data">{{LINES}}</tspan> ( <tspan class="addColor" id="loc_add">{{PLUS}}</tspan><tspan class="addColor">++</tspan>, <tspan id="loc_del_dots"> </tspan><tspan class="delColor" id="loc_del">{{MINUS}}</tspan><tspan class="delColor">--</tspan> )
-  
+   
   </text>
 </svg>
